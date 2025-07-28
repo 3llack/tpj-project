@@ -1,33 +1,21 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Product-Sans", sans-serif;
+  src: url("/public/fonts/Product\ Sans\ Regular.ttf") format(".ttf");
+  font-weight: 400;
+  font-style: normal;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: "Product-Sans", sans-serif;
 }
 
 a {
@@ -35,8 +23,62 @@ a {
   text-decoration: none;
 }
 
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+.nav{
+  background-color: #f9f9f9;
+}
+
+.navSet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navSet ul li{
+  display: inline-block;
+}
+
+.header ul li{
+  color: #3A5D57;
+}
+
+.header button{
+  background-color: #3A5D57;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+  display: inherit;
+}
+
+.headerHov{
+  transform: scale(0.95) !important;
+  transition: transform 0.1s ease-in;
+  box-shadow: none !important;
+}
+
+/*** scroll ***/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
 }
