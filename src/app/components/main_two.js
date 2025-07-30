@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-export default function main_two() {
+export default function mainTwo() {
   const mainRef = useRef(null);
   const hovered = () => {
     mainRef.current?.classList.add("headerHov")
@@ -21,7 +21,7 @@ export default function main_two() {
           <a href='#'>
             <button 
               ref={mainRef}
-              class="mt-6 py-3 px-6 shadow-md"
+              className="mt-6 py-3 px-6 shadow-md"
               onMouseEnter={hovered}
               onMouseLeave={unHovered}
               >

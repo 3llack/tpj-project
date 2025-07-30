@@ -1,10 +1,10 @@
 'use client';
 import { useRef } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import Interlude from "next/image";
+import Image from "next/image";
 
 
-export default function main_one() {
+export default function mainOne() {
   const donRef = useRef(null);
   const hovered = () => {
     donRef.current?.classList.add("headerHov")
@@ -18,7 +18,7 @@ export default function main_one() {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left Column */}
         <div className="main_one_left px-4 py-9 mx-5">
-          <Interlude 
+          <Image 
             src="/images/tpj_out.webp"
             width={700}
             height={250}

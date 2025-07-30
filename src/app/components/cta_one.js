@@ -1,7 +1,7 @@
 'use client';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-export default function cta_one() {
+export default function ctaOne() {
   return(
     <>
       <div className='cta' id='cta'>
