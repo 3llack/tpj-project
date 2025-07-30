@@ -1,14 +1,14 @@
 'use client';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useRef } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function main_two() {
   const mainRef = useRef(null);
   const hovered = () => {
-    mainRef.current.classList.add("headerHov")
+    mainRef.current?.classList.add("headerHov")
   }
   const unHovered = () => {
-    mainRef.current.classList.remove("headerHov")
+    mainRef.current?.classList.remove("headerHov")
   }
   return(
     <>

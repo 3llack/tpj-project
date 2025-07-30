@@ -1,16 +1,16 @@
 'use client';
+import { useRef } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Interlude from "next/image";
-import { useRef } from 'react';
 
 
 export default function main_one() {
   const donRef = useRef(null);
   const hovered = () => {
-    donRef.current?.classList.add("headerHov", "animate-slide-up-down")
+    donRef.current?.classList.add("headerHov")
   }
   const unHovered = () => {
-    donRef.current?.classList.remove("headerHov", "animate-slide-up-down")
+    donRef.current?.classList.remove("headerHov")
   }
 
   return (
