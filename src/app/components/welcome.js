@@ -12,10 +12,10 @@ export default function Home() {
 
   const donRef = useRef(null);
   const hovered = () => {
-    donRef.current?.classList.add("headerHov", "animate-slide-up-down")
+    donRef.current?.classList.add("headerHov")
   }
   const unHovered = () => {
-    donRef.current?.classList.remove("headerHov", "animate-slide-up-down")
+    donRef.current?.classList.remove("headerHov")
   }
 
   return (
@@ -27,7 +27,7 @@ export default function Home() {
               <p className="px-2">Welcome to The Prince Jacob Foundation</p>
               <ul className="flex">
                 <li className="px-2">
-                  <a href="https://instagram.com" target="_blank">
+                  <a href="https://www.instagram.com/prince.jacob.foundation?igsh=MXQ4NmJqcjV0bjJ3Nw==" target="_blank">
                     <i className="fab fa-instagram"> </i>
                   </a>
                 </li>
