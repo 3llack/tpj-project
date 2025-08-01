@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image";
+import Button from "../elements/button.jsx";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +14,14 @@ export default function Nav() {
 
   return (
     <>
-      <header className="nav" id="nav">
+      <header className="bg-[#f9f9f9] text-[14px]" id="nav">
         <div className="container mx-auto sm:px-4 md:px-6 lg:px-8">
           <div className="-mx-2 flex flex-wrap items-center justify-between px-2">
-            <div className="navSet flex items-center gap-2 px-2 py-2">
+            <div className="flex items-center justify-between gap-2 px-2 py-2">
               <p className="text-xs sm:text-base">
                 Welcome to The Prince Jacob Foundation
               </p>
-              <ul className="flex gap-1">
+              <ul className="flex gap-3">
                 <li>
                   <a
                     href="https://www.instagram.com/prince.jacob.foundation?igsh=MXQ4NmJqcjV0bjJ3Nw=="
@@ -60,7 +61,7 @@ export default function Nav() {
         </div>
       </header>
 
-      <nav className="header" id="header">
+      <nav className="header text-[#3A5D57]" id="header">
         <div className="container mx-auto">
           <div className="relative flex flex-wrap items-center justify-between px-1">
             <div className="flex items-center">
@@ -92,15 +93,18 @@ export default function Nav() {
                   <a href="#">Contact Us</a>
                 </li>
 
-                <li>
+                <li className="px-4">
                   <a href="#">
-                    <button className="px-5 py-5 transition-transform duration-100 ease-in hover:scale-[0.95] hover:!shadow-none">
-                      Donate Now
-                    </button>
+                    <Button 
+                      bgColor="bg-[#3A5D57]"
+                      textColor="text-[#fff]"
+                      text="Donate Now" 
+                    />
                   </a>
                 </li>
               </ul>
             </div>
+
 
             {/* Mobile Menu */}
             <div
@@ -108,8 +112,9 @@ export default function Nav() {
               className="cursor-pointer md:hidden"
             >
               {isOpen ? (
-                // TODO: Implement close sign
-                <div>close</div>
+                <div>
+                  <i className="fa-solid fa-x"></i>
+                </div>
               ) : (
                 <Image
                   src="/images/menu.svg"
@@ -142,9 +147,11 @@ export default function Nav() {
 
                   <li>
                     <a href="#">
-                      <button className="px-5 py-5 transition-transform duration-100 ease-in hover:scale-[0.95] hover:!shadow-none">
-                        Donate Now
-                      </button>
+                      <Button 
+                        bgColor="bg-[#3A5D57]"
+                        textColor="text-[#fff]"
+                        text="Donate Now"
+                      />
                     </a>
                   </li>
                 </ul>
