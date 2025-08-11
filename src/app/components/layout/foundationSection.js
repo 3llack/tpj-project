@@ -1,43 +1,8 @@
 'use client';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import { Users, Handshake, Heart, DollarSign } from 'lucide-react';
+import React from "react";
+import opportunity from "@/app/data/cardData.json"
 
 export default function foundationSection() {
-  const opportunities = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Refer a Child",
-      description: "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
-      action: "referral",
-      bgColor: "bg-forest-green",
-      iconColor: "text-warm-yellow"
-    },
-    {
-      icon: <Handshake className="w-8 h-8" />,
-      title: "Partner With Us",
-      description: "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
-      action: "join hands",
-      bgColor: "bg-warm-yellow",
-      iconColor: "text-forest-green"
-    },
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Volunteer",
-      description: "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
-      action: "volunteer",
-      bgColor: "bg-forest-green",
-      iconColor: "text-warm-yellow"
-    },
-    {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Fund Programme",
-      description: "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
-      action: "donate",
-      bgColor: "bg-warm-yellow",
-      iconColor: "text-forest-green"
-    }
-  ];
-
   return(
     <>
       <div className="bg-gray-50 min-h-screen py-9">
@@ -52,17 +17,26 @@ export default function foundationSection() {
             </h1>
           </div>
 
-          {/* Opportunities Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {opportunities.map((opportunity, index) => (
+          {/* Card Section */}
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {opportunity.map((opportunity, index) => (
               <div 
                 key={index} 
-                className="bg-white p-6 sm:p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
+                className="bg-white rounded-xl p-6 sm:p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
               >
                 {/* Icon Circle */}
                 <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 ${opportunity.bgColor}`}>
                   <div className={opportunity.iconColor}>
-                    {opportunity.icon}
+                    {/* Dynamically render icon */}
+                    {opportunity.icon.startsWith("/images") ? (
+                      <img 
+                        src={opportunity.icon} 
+                        alt={`${opportunity.title} icon`} 
+                        className="w-6 h-6 sm:w-8 sm:h-8"
+                      />
+                    ) : (
+                      <i className={`text-xl sm:text-2xl ${opportunity.icon}`} aria-hidden="true"></i>
+                    )}
                   </div>
                 </div>
                 
@@ -83,12 +57,19 @@ export default function foundationSection() {
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                    />
                   </svg>
                 </div>
               </div>
             ))}
           </div>
+
+
         </div>
       </div>
     </>

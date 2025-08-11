@@ -51,6 +51,23 @@ a {
   }
 }
 
+.cta{
+  background: linear-gradient(90deg, rgba(255,240,133,0.9) 0%, rgba(255,240,133,0.9) 100%), url(/images/cta-bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.testimonialSection{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(/images/testBg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
 .csr{
   margin-top: 65px;
   margin-bottom: 65px;

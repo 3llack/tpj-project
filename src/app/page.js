@@ -2,7 +2,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image"
 import Button from "./components/elements/button.jsx";
 import Sponsor from "./components/layout/sponsorSection.js";
-import Foundation from "./components/layout/foundationSection.js"
+import Foundation from "./components/layout/foundationSection.js";
+import Testimonial from "./components/layout/testimonialSection.js";
 
 export default function Home() {
   return (
@@ -52,8 +53,8 @@ export default function Home() {
       <section>
         <div
           id="cta"
-          className="bg-center bg-no-repeat bg-cover bg-fixed pt-16 pb-16 h-[500px]"
-          style={{ background: `linear-gradient(90deg, rgba(255,240,133,0.5) 0%, rgba(255,240,133,0.5) 100%), url('/images/cta-bg.webp')`}}
+          className="cta bg-center bg-no-repeat bg-cover bg-fixed pt-16 pb-16 h-[500px]"
+          // style={{ background: `linear- ,url('/images/cta-bg.webp')`}}
           >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center px-2 -mx-2">
@@ -151,6 +152,11 @@ export default function Home() {
       <section>
         <Foundation />
       </section>
+
+      <section>
+        <Testimonial />
+      </section>
+      <hr className="border-0 h-[5px] text-white bg-[#c7b438]" />
 
       <a
         href="#"

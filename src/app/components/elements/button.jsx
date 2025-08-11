@@ -1,6 +1,6 @@
-'use client'
-import React from "react"
-import clsx from "clsx"
+'use client';
+import React from "react";
+import clsx from "clsx";
 
 export default function Button( {text, bgColor="bg-[#f9f9f9]", textColor="text-white"} ){
   return (
