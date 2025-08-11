@@ -1,3 +1,4 @@
+'use client';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image"
 import Button from "./components/elements/button.jsx";
@@ -53,23 +54,21 @@ export default function Home() {
       <section>
         <div
           id="cta"
-          className="cta bg-center bg-no-repeat bg-cover bg-fixed pt-16 pb-16 h-[500px]"
+          className="cta bg-center bg-no-repeat bg-cover bg-fixed pt-16 pb-16"
           // style={{ background: `linear- ,url('/images/cta-bg.webp')`}}
-          >
+        >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center px-2 -mx-2">
-              <h2 className='text-center text-[32px] font-bold w-[60vw]'>
+              <h2 className='text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] font-bold w-full sm:w-[80vw] md:w-[70vw] lg:w-[60vw]'>
                 We are committed to providing children access
-                to quality education, supporting families with 
-                essential needs, and offering women and girls 
+                to quality education, supporting families with
+                essential needs, and offering women and girls
                 the opportunity to thrive
               </h2>
             </div>
-
-
             <div className='flex flex-wrap justify-center items-center py-9'>
               <a href='/' target='_blank'>
-                <span className='bg-black text-white text-[32px] p-[10px] rounded-full'>
+                <span className='bg-black text-white text-xl sm:text-2xl md:text-3xl lg:text-[32px] p-[10px] rounded-full'>
                   <i className="fa-solid fa-arrow-down"></i>
                 </span>
               </a>
@@ -162,6 +161,13 @@ export default function Home() {
         href="#"
         className="back-to-top active flex items-center justify-center"
         style={{ textDecoration: "none" }}
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }}
       >
         <i className="fa fa-angle-double-up"></i>
       </a>
