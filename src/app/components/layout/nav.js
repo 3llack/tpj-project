@@ -67,7 +67,7 @@ export default function Nav() {
             <div className="flex items-center">
               <Image
                 src="/images/logo.png"
-                className="w-28 md:w-[270px]"
+                className="w-28 md:w-[135px]"
                 width={logoSize.width}
                 height={logoSize.height}
                 alt="the prince jacob foundation"

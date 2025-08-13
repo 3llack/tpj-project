@@ -1,14 +1,8 @@
+'use client';
 import React from 'react';
-import { Globe } from 'lucide-react';
+import navLinks from '@/app/data/footerData.json'
 
 export default function Footer(){
-  const navigationLinks = [
-    'About Us',
-    'Solutions',
-    'Media',
-    'Contact Us'
-  ];
-
   return (
     <footer className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -17,8 +11,8 @@ export default function Footer(){
           <div className="space-y-8">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-                <Globe className="w-6 h-6 text-white" />
+              <div className="flex items-center justify-center">
+                <img src='/images/logo.png' className="w-32 h-32 text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900">The Prince Jacob</h3>
@@ -33,21 +27,21 @@ export default function Footer(){
 
             {/* Donate Button */}
             <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium px-8 py-3 rounded-full transition-colors duration-300">
-              Donate Now
+              <a href=''>Donate Now</a>
             </button>
           </div>
 
           {/* Right Section - Navigation Card */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-forest-green p-8 lg:p-12 rounded-2xl w-full max-w-sm">
+            <div className="bg-forest-green p-8 lg:p-12 w-full max-w-sm footer-card">
               <nav className="space-y-6">
-                {navigationLinks.map((link, index) => (
+                {navLinks.map((link) => (
                   <a
-                    key={index}
-                    href="#"
+                    key={link.id}
+                    href={link.href}
                     className="block text-white text-xl lg:text-2xl font-normal hover:text-gray-200 transition-colors duration-300"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 ))}
                 
@@ -55,9 +49,11 @@ export default function Footer(){
                 <div className="pt-4">
                   <p className="text-white text-xl lg:text-2xl font-normal mb-2">
                     Follow Us:{' '}
-                    <span className="text-gray-200 font-light">
-                      prince.jacob.foundation
-                    </span>
+                    <a 
+                      href='https://www.instagram.com/prince.jacob.foundation?igsh=MXQ4NmJqcjV0bjJ3Nw==' 
+                      target='_blank'
+                      className='text-white'
+                    >prince.jacob.foundation</a>
                   </p>
                 </div>
               </nav>
@@ -69,7 +65,7 @@ export default function Footer(){
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-gray-600 text-sm">
             The Prince Jacob Foundation © 2025 | Built by{' '}
-            <span className="font-medium">266Labs</span>
+            <span className="font-medium"><a href='https://266labs.netlify.app' target='_blank'>266Labs</a></span>
           </p>
         </div>
       </div>

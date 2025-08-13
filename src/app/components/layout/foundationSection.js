@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import opportunity from "@/app/data/cardData.json"
+import opportunity from "@/app/data/foundationData.json"
 
 export default function foundationSection() {
   return(
@@ -19,9 +19,9 @@ export default function foundationSection() {
 
           {/* Card Section */}
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {opportunity.map((opportunity, index) => (
+            {opportunity.map((opportunity) => (
               <div 
-                key={index} 
+                key={opportunity.id} 
                 className="bg-white rounded-xl p-6 sm:p-8 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm"
               >
                 {/* Icon Circle */}

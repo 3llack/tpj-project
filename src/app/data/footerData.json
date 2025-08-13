@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "name": "About Us",
+    "href": "#"
+  },
+  {
+    "id": "2",
+    "name": "Solutions",
+    "href": "#"
+  },
+  {
+    "id": "3",
+    "name": "Media",
+    "href": "#"
+  },
+  {
+    "id": "4",
+    "name": "Contact Us",
+    "href": "#"
+  }
+]

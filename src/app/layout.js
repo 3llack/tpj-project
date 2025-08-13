@@ -1,7 +1,6 @@
 import "./globals.css";
 import Nav from "./components/layout/nav.js";
 import Footer from "./components/layout/footer.js"
-import { icons } from "lucide-react";
 
 export const metadata = {
   title: "The Prince Jacob Foundation",
@@ -18,7 +17,6 @@ export const metadata = {
     "volunteer foundation",
     "sponsor"
   ],
-  themeColor: "#000000",
   metadataBase: new URL("https://theprincejacobfoundation.netlify.app"),
   alternates: {
     canonical: "/"

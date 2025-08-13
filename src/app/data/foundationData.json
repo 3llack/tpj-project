@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "icon": "/images/people-arrows.svg",
     "title": "Refer a Child",
     "description": "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
@@ -8,6 +9,7 @@
     "iconColor": "text-warm-yellow"
   },
   {
+    "id": "2",
     "icon": "/images/handshake.svg",
     "title": "Partner With Us",
     "description": "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
@@ -16,6 +18,7 @@
     "iconColor": "text-forest-green"
   },
   {
+    "id": "3",
     "icon": "/images/med-hand.svg",
     "title": "Volunteer",
     "description": "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",
@@ -24,6 +27,7 @@
     "iconColor": "text-warm-yellow"
   },
   {
+    "id": "4",
     "icon": "/images/dollar.svg",
     "title": "Fund Programme",
     "description": "Give a child the gift of education and opportunity. Your support provides access to learning, mentorship, and a brighter future.",

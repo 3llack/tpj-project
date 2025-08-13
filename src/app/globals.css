@@ -52,11 +52,11 @@ a {
   }
 }
 
-@media (max-width: 950px){
+/* @media (max-width: 950px){
   body{
     display: none;
   }
-}
+} */
 
 .cta{
   background: linear-gradient(90deg, rgba(255,240,133,0.9) 0%, rgba(255,240,133,0.9) 100%), url(/images/cta-bg.webp);
@@ -88,6 +88,12 @@ a {
 .sponsor{
   margin-top: 65px;
   margin-bottom: 65px;
+}
+
+.footer-card{
+  margin-top: -48px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 /*** scroll ***/
