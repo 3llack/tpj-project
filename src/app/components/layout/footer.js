@@ -26,9 +26,11 @@ export default function Footer(){
             </p>
 
             {/* Donate Button */}
-            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium px-8 py-3 rounded-full transition-colors duration-300">
-              <a href=''>Donate Now</a>
-            </button>
+            <a href='#'>
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium px-8 py-3 rounded-full transition-colors duration-300">
+                Donate Now
+              </button>
+            </a>
           </div>
 
           {/* Right Section - Navigation Card */}
@@ -39,7 +41,7 @@ export default function Footer(){
                   <a
                     key={link.id}
                     href={link.href}
-                    className="block text-white text-xl lg:text-2xl font-normal hover:text-gray-200 transition-colors duration-300"
+                    className="block text-xl lg:text-2xl font-normal text-gray-200 hover:text-[#c7b438] transition-colors duration-300"
                   >
                     {link.name}
                   </a>
@@ -47,14 +49,37 @@ export default function Footer(){
                 
                 {/* Follow Us Section */}
                 <div className="pt-4">
-                  <p className="text-white text-xl lg:text-2xl font-normal mb-2">
-                    Follow Us:{' '}
-                    <a 
-                      href='https://www.instagram.com/prince.jacob.foundation?igsh=MXQ4NmJqcjV0bjJ3Nw==' 
-                      target='_blank'
-                      className='text-white'
-                    >prince.jacob.foundation</a>
+                  <p className="text-gray-200 text-xl lg:text-2xl font-normal mb-2">
+                    Follow Us:
                   </p>
+                  <ul className="flex gap-3">
+                    <li>
+                      <a
+                        href="https://www.instagram.com/prince.jacob.foundation?igsh=MXQ4NmJqcjV0bjJ3Nw=="
+                        target="_blank"
+                      >
+                        <i className="fab fa-instagram text-gray-200 hover:text-[#c7b438]"> </i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://facebook.com" target="_blank">
+                        <i className="fab fa-facebook text-gray-200 hover:text-[#c7b438]"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://twitter.com" target="_blank">
+                        <i className="fab fa-twitter text-gray-200 hover:text-[#c7b438]"></i>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="https://web.whatsapp.com" target="_blank">
+                        <i className="fab fa-whatsapp text-gray-200 hover:text-[#c7b438]"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </nav>
             </div>

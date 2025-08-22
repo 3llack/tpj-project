@@ -6,7 +6,7 @@ export default function sponsorSection() {
   return(
     <>
       <div className='sponsor'>
-        <div className="bg-yellow-200 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto shadow-lg">
+        <div className="bg-yellow-200 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 max-w-3xl mx-auto shadow-lg">
           <div className="max-w-xl p-10">
             <h2 className="text-2xl md:text-3xl font-medium text-gray-900 leading-relaxed">
               Empowerment of kids' <strong>EDUCATION</strong> is paramount to our global sustenance.

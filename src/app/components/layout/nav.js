@@ -1,11 +1,16 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../elements/button.jsx";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/"
+  const isAbout = pathname === "/about"
 
   const logoSize = {
     width: 105,
@@ -65,31 +70,43 @@ export default function Nav() {
         <div className="container mx-auto">
           <div className="relative flex flex-wrap items-center justify-between px-1">
             <div className="flex items-center">
-              <Image
-                src="/images/logo.png"
-                className="w-28 md:w-[135px]"
-                width={logoSize.width}
-                height={logoSize.height}
-                alt="the prince jacob foundation"
-              />
+              {isHome ? (
+                <Image
+                  src="/images/logo.png"
+                  className="w-28 md:w-[135px]"
+                  width={logoSize.width}
+                  height={logoSize.height}
+                  alt="the prince jacob foundation"
+                />
+              ) : (
+              <Link href="/">
+                <Image
+                  src="/images/logo.png"
+                  className="w-28 md:w-[135px]"
+                  width={logoSize.width}
+                  height={logoSize.height}
+                  alt="the prince jacob foundation"
+                />
+              </Link>
+              )};
             </div>
 
             {/* Wide Screen menu */}
             <div className="hidden md:block">
               <ul className="flex items-center">
-                <li className="px-4">
-                  <a href="#">About Us</a>
+                <li className="hover:text-[#c7b438] px-4">
+                  {isAbout ? (<span>About Us</span>) : (<Link href="/about">About Us</Link>)}
                 </li>
 
-                <li className="px-4">
+                <li className="hover:text-[#c7b438] px-4">
                   <a href="#">Solutions</a>
                 </li>
 
-                <li className="px-4">
+                <li className="hover:text-[#c7b438] px-4">
                   <a href="#">Media</a>
                 </li>
 
-                <li className="px-4">
+                <li className="hover:text-[#c7b438] px-4">
                   <a href="#">Contact Us</a>
                 </li>
 

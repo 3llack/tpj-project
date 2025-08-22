@@ -1,5 +1,6 @@
 'use client';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Link from "next/link"
 import Image from "next/image"
 import Button from "./components/elements/button.jsx";
 import Sponsor from "./components/layout/sponsorSection.js";
@@ -11,42 +12,8 @@ export default function Home() {
     <>
       <section>
         <div className="hero">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* Left Column */}
-            <div className="bg-gradient-to-l from-[#3A5E57] to-[#383838] text-white px-4 py-9 -mx-2">
-              <h2 className="text-[55px] font-bold mb-4">On a mission to break the cycle of poverty through</h2>
-              <ul className="text-[22px]">
-                <li className='py-4'>
-                  <i className="fa-solid fa-graduation-cap px-9"></i>
-                  Education
-                </li>
-    
-                <li className='py-4'>
-                  <i className="fa-solid fa-business-time px-9"></i>
-                  Entrepreneurship
-                </li>
-    
-                <li className='py-4'>
-                  <i className="fa-solid fa-hands-holding px-9"></i>
-                  Healthcare
-                </li>
-    
-                <li className='py-4'>
-                  <i className="fa-solid fa-people-line px-9"></i>
-                  Community Development
-                </li>
-              </ul>
-            </div>
-    
-            {/* Right Column */}
-            <div className="hero_right px-4 py-9 -mx-2 flex items-center">
-              <Image 
-                src="/images/say2deg.webp"
-                width={700}
-                height={250}
-                alt='promo-banner'
-              />
-            </div>
+          <div className="">
+            <h1 className="text-[75px] text-center"> INSERT VIDEO </h1>
           </div>
         </div>
       </section>
@@ -55,7 +22,6 @@ export default function Home() {
         <div
           id="cta"
           className="cta bg-center bg-no-repeat bg-cover bg-fixed pt-16 pb-16"
-          // style={{ background: `linear- ,url('/images/cta-bg.webp')`}}
         >
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center px-2 -mx-2">
@@ -105,12 +71,12 @@ export default function Home() {
         <div className="csr" id="csr">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left Column */}
-            <div className="px-4 py-9 mx-5">
+            <div className="px-4 py-9 mx-5 flex justify-center">
               <Image 
-                src="/images/tpj_out.webp"
-                width={700}
-                height={250}
-                alt='tpj-outreach'
+                src="/images/giphy.gif"
+                width={500}
+                height={375}
+                alt='tpj-volunteer'
               />
             </div>
     
@@ -132,20 +98,20 @@ export default function Home() {
                 often hinder a child's ability to succeed academically and socially.
               </p>
               
-              <a href='#'>
+              <Link href="/about">
                 <Button 
                   bgColor="bg-[#3A5D57]"
                   textColor="text-[#fff]"
                   text="Read More About Us" 
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <Sponsor />
+        <h1 className="text-[75px] text-center">INSERT CAROUSEL</h1>
       </section>
 
       <section>
